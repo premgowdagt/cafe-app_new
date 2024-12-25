@@ -1,11 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: cafe-service
+  name: cafe-app-service
 spec:
   selector:
     app: cafe-app
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30008 
+  type: NodePort
+
+
+
