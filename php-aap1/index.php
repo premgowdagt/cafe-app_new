@@ -1,5 +1,5 @@
 <?php
-echo "<h1>Welcome to Cafe</h1>";
+echo "<h1>Welcome to shit cafe</h1>";
 
 // Check if the user is trying to view the menu or place an order
 if (isset($_GET['page'])) {
