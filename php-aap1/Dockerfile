@@ -7,10 +7,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Configure the PHP application
-COPY index.php /var/www/html/
-COPY menu.php /var/www/html/
-COPY order.php /var/www/html/
-COPY metrics.php /var/www/html/
+COPY php-aap1/index.php /var/www/html/
+COPY php-aap1/menu.php /var/www/html/
+COPY php-aap1/order.php /var/www/html/
+COPY php-aap1/metrics.php /var/www/html/
 # Expose the application port and the metrics port
 EXPOSE 80
 
