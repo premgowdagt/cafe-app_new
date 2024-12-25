@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: cafe-app
-        image: premgowda07/cafe-app:v1
+        image: premgowda07/cafe-app:v2
         ports:
         - containerPort: 80
