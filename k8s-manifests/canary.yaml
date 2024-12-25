@@ -1,0 +1,26 @@
+apiVersion: flagger.app/v1beta1
+kind: Canary
+metadata:
+  name: cafe-canary
+  namespace: default
+spec:
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cafe-app
+  service:
+    port: 80
+    targetPort: 80
+    gateways:
+      - cafe-gateway
+    hosts:
+      - "*"
+  analysis:
+    interval: 30s
+    threshold: 3
+    maxWeight: 50
+    stepWeight: 10
+    metrics:
+      - name: request-success-rate
+        threshold: 95
+        interval: 30s
