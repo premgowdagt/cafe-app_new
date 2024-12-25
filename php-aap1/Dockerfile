@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 COPY php-aap1/index.php /var/www/html/
 COPY php-aap1/menu.php /var/www/html/
 COPY php-aap1/order.php /var/www/html/
-COPY php-aap1/metrics.php /var/www/html/
+
 # Expose the application port and the metrics port
 EXPOSE 80
 
