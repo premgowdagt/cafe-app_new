@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cafe-app-deployment
+  name: cafe-app
 spec:
   replicas: 3
   selector:
