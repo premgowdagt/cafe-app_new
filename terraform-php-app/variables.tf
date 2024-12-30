@@ -1,7 +1,7 @@
 variable "region" {
-  default = "us-east-1"
+  default = "us-east-1" # Your region
 }
 
 variable "key_name" {
-  description = "Name of the AWS key pair for SSH access"
+  default = "labsuser.pem" # Your key pair name
 }
