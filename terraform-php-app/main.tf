@@ -5,7 +5,7 @@ provider "aws" {
 
 # Create an EC2 instance
 resource "aws_instance" "php_server" {
-  ami           = "ami-0c02fb55956c7d316" # Amazon Linux 2 AMI (Replace based on region)
+  ami           = "ami-0c02fb55956c7d316" # Amazon Linux 2 AMI for us-east-1
   instance_type = "t2.micro"
   key_name      = var.key_name
 
@@ -17,7 +17,7 @@ resource "aws_instance" "php_server" {
               systemctl start httpd
               systemctl enable httpd
               cd /var/www/html
-              git clone https://github.com/your-username/php-aap1.git .
+              git clone https://github.com/premgowdagt/cafe-application.git .
               EOF
 
   tags = {
